@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Inscription</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    a:hover {
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Formulaire d'inscription</h2>
+
+<form action="/req/register" method="post">
+  <label for="nom">Nom :</label>
+  <input type="text" name="nom" id="nom" placeholder="Nom" required/>
+
+  <label for="prenom">Prénom :</label>
+  <input type="text" name="prenom" id="prenom" placeholder="Prénom" required/>
+  <label for="username">Username :</label>
+  <input type="text" name="username" id="username" placeholder="username" required/>
+
+  <label for="email">Email :</label>
+  <input type="email" name="email" id="email" placeholder="Email" required/>
+
+  <label for="password">Mot de passe :</label>
+  <input type="password" name="password" id="password" placeholder="Mot de passe" required/>
+
+  <label for="genre">Genre :</label>
+  <select name="genre" id="genre" required>
+    <option value="Homme">Homme</option>
+    <option value="Femme">Femme</option>
+  </select>
+
+  <label for="numeroTelephone">Numéro de téléphone :</label>
+  <input type="text" name="numeroTelephone" id="numeroTelephone" placeholder="Numéro de téléphone" required/>
+
+  <button type="submit">S'inscrire</button>
+</form>
+
+<a href="/req/login">Vous avez déjà un compte ?</a>
+
+</body>
+</html>
